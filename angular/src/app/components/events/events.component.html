@@ -1,0 +1,42 @@
+<h1 class="page-header">Upcoming Events</h1>
+<div class="container">
+  <div class="row">
+    <div>
+      <img src="../../assets/sing_well_being.jpg" class="img-responsive img-rounded pull-left" alt="Singing for well being">
+    </div>
+    <div>
+      <h4 class="text-primary"><i>Singing for your well-being</i></h4> Give your body a workout through singing and movement to improve your physical and psychological health. <strong>Singing for Your Well-being</strong> is a workshop based on singing and which facilitates reconnection with oneself and with others.
+      This workshop assists in building self-confidence and releasing blockages through creativity and group dynamics in a relaxed atmosphere. Singing and dancing stimulates our brain and allows us to increase the production of endorphins and serotonins,
+      "hormones of happiness" and natural painkillers!
+      <br>
+      <br> We use singing, music, movement, meditation and techniques improving posture and breathing.
+      <br>
+      <br> No skill in singing or dancing is required, everyone is welcome! The exercises and the choice of musical repertoire are easy and accessible to all.
+    </div>
+  </div>
+  <div class="row">
+    <span><h4>Dates:<br>Mondays from 7:30pm to 9:30pm. (Starting September 4th, 2017)</h4></span>
+    <i>(No obligation to follow each session)</i>
+    <address>
+      Where?:<br>
+      Salle de Musique "Le Torrent"<br>
+      Centre Culturel de l'Hôpital Malevoz<br>
+      Dernier Étage<br>
+      Route de Morgins 10<br>
+      1870 Monthey
+    </address>
+  </div>
+  <div class="row" *ngIf="authService.loggedIn()">
+    <form class="form-inline">
+      <div class="form-group">
+        <label>Date</label>
+        <!-- <input type="text" [(ngModel)]="date" name="date" class="form-control"> -->
+        <input type="text" class="form-control">
+      </div>
+      <input  type="submit" class="btn btn-primary" value="Register">
+    </form>
+  </div>
+  <div class="jumbotron text-center" *ngIf="!authService.loggedIn()">
+    <h3>Login To Register For Event </h3>
+    <a class="btn btn-primary" [routerLink]="['/login']">Login</a>
+  </div>
